@@ -1,0 +1,246 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #001838;
+}
+
+h1, h2, h3, h4, h5, h6, p, span {
+    color: #001838;
+}
+
+/* Верхня стрічка (header) */
+header {
+    background-color: #7ac6e8; /* Синій колір */
+    color: #001838;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center; /* Центруємо весь контент */
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+header .logo img {
+    height: auto;
+    width: 80px;
+}
+
+/* Меню навігації */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+a {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+nav ul li a {
+    color: #1f235a; /* Темно-синій колір */
+    text-decoration: none; /* Видаляємо стандартне підкреслення */
+    font-family: "Kippax Modern", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: bold;
+    position: relative;
+    padding: 5px 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--colour-dark-blue-900, #1f235a);
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #1f235a; /* Світло-синій колір при hover */
+    transform: scale(1.05);
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Повне підкреслення */
+}
+
+
+.container {
+    max-width: 900px; /* Максимальна ширина */
+    margin: 0 auto; /* Центруємо по горизонталі */
+    padding: 20px; /* Відступи всередині контейнера */
+}
+
+/* Блок про мене (Flexbox для розташування фото з лівого боку) */
+.about-me {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px; /* Відстань між фото і текстом */
+}
+
+/* Контейнер для фото */
+.image-container {
+    flex: 0 0 200px; /* Фіксована ширина для фото */
+}
+
+.my-photo {
+    width: 200px; /* Ширина фото */
+    height: 200px; /* Висота фото, щоб зробити його круглим */
+    object-fit: cover; /* Вирівнювання фото, щоб воно не спотворювалося */
+    border-radius: 50%; /* Округлення фото */
+    border: 3px solid #001838; /* Обводка навколо фото (за бажанням) */
+}
+
+/* Текстова частина */
+.text-content {
+    flex: 1;
+    max-width: 600px; /* Максимальна ширина текстового блоку */
+}
+
+/* Заголовки та текст */
+h1, h2, h3 {
+    text-align: center;
+    color: #1f235a;
+}
+
+p, ul {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #001838;
+    text-align: center;
+}
+
+/* Форми */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    max-width: 500px; /* Максимальна ширина для полів вводу */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #7ac6e8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #1f235a;
+}
+
+/* Головна секція */
+main {
+    flex: 1;
+    margin-top: 80px;
+    padding: 20px;
+}
+.footer-text {
+    color: white; /* Білий колір тексту */
+}
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-info h1 {
+    font-size: 2rem;
+}
+
+.contact-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-info ul li {
+    margin-bottom: 10px;
+}
+
+.contact-form {
+    margin-top: 20px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: #7ac6e8;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.contact-form button:hover {
+    background-color: #58a2c9;
+}
+
+/* Нижня стрічка (footer) */
+footer {
+    background-color: #001838;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
